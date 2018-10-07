@@ -30,7 +30,7 @@ class ModelResourceFactory {
     }
     
     func photosResource(token: String) -> Resource<PhotosResponse> {
-        guard let url = URL(string: "https://api.instagram.com/v1/users/self/media/recent?\(["access_token" : token])") else {
+        guard let url = URL(string: "https://api.instagram.com/v1/users/self/media/recent?\(["access_token" : token].getString)") else {
             fatalError("Can't create URL")
         }
         return Resource<PhotosResponse>(url: url, method: HttpMethod<Data>.get, headers: nil)
