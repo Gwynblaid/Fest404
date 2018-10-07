@@ -9,7 +9,7 @@ protocol Cancellation {
 }
 
 enum OperationCompletion<A>{
-	case success(A?)
+	case success(A)
 	case failure(Error)
 }
 

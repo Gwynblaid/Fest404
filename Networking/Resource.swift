@@ -7,10 +7,10 @@ import Foundation
 struct Resource<ResourceType> {
 	let url: URL
 	let method: HttpMethod<Data>
-	let parse: (Data) throws -> ResourceType?
+	let parse: (Data) throws -> ResourceType
 	let headers: [String : String]?
 	
-	init(url: URL, method: HttpMethod<Data>, parse: @escaping (Data) throws -> ResourceType?, headers: [String : String]?) {
+	init(url: URL, method: HttpMethod<Data>, parse: @escaping (Data) throws -> ResourceType, headers: [String : String]?) {
 		self.url = url
 		self.method = method
 		self.parse = parse
