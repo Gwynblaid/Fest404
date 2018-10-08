@@ -53,6 +53,7 @@
 		18387C2F2164B5E50065D196 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		18387C312164BB200065D196 /* ModelResourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResourceFactory.swift; sourceTree = "<group>"; };
 		18387C332164C1120065D196 /* InstagramApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApiClient.swift; sourceTree = "<group>"; };
+		1891C8DD216A36B600893442 /* InstagramApiClient+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "InstagramApiClient+Private.h"; sourceTree = "<group>"; };
 		18AEE603215E234E0047E420 /* Fest404.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fest404.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AEE606215E234E0047E420 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18AEE607215E234E0047E420 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 			children = (
 				18AEE6252160BBD20047E420 /* InstagramApiClient.h */,
 				18AEE6262160BBD20047E420 /* InstagramApiClient.m */,
+				1891C8DD216A36B600893442 /* InstagramApiClient+Private.h */,
 				18387C332164C1120065D196 /* InstagramApiClient.swift */,
 				18AEE6282161483B0047E420 /* InstagramAuthorizationViewController.h */,
 				18AEE6292161483B0047E420 /* InstagramAuthorizationViewController.m */,

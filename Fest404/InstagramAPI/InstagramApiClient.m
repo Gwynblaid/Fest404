@@ -5,6 +5,7 @@
 #import <UIKit/UIKit.h>
 #import "ModelParser.h"
 #import "NSDictionary+Requests.h"
+#import "InstagramApiClient+Private.h"
 
 static NSString *const ClientID = @"a73c914cc080435d87a94311cff47062";
 static NSString *const ClientSecret = @"df66ea65099a46d7b2829bddcd1c7e14";
@@ -12,7 +13,6 @@ static NSString *const redirectURL = @"http://testinst.app";
 
 @interface InstagramApiClient()
 
-@property (nonatomic, strong) NSString *token;
 @property (nonatomic, strong) ModelParser *parser;
 
 @end
@@ -34,34 +34,34 @@ static NSString *const redirectURL = @"http://testinst.app";
 	return self;
 }
 
-- (void)requestMyPhotosWithSuccess:(void (^)(NSArray<InstagramPhotoData *> *))succeeded
-                           failure:(void (^)(NSError *))failure {
-    if(!self.token.length) {
-        if(failure) {
-            failure([NSError errorWithDomain:@"mydomain" code:101 userInfo:@{NSLocalizedDescriptionKey: @"You are not authorized"}]);
-        }
-        return;
-    }
-    NSString *requestString = [NSString stringWithFormat:@"https://api.instagram.com/v1/users/self/media/recent?access_token=%@", self.token];
-    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:requestString] completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {
-        if(error) {
-            failure(error);
-            return;
-        }
-        NSError *err = nil;
-        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-		NSArray *result;
-		if(!err) {
-			result = [self.parser parsePhotoResponseFromJSON:json error:&err];
-		}
-		if(err) {
-			failure(err);
-		} else {
-			succeeded(result);
-		}
-    }];
-    [task resume];
-}
+//- (void)requestMyPhotosWithSuccess:(void (^)(NSArray<InstagramPhotoData *> *))succeeded
+//                           failure:(void (^)(NSError *))failure {
+//    if(!self.token.length) {
+//        if(failure) {
+//            failure([NSError errorWithDomain:@"mydomain" code:101 userInfo:@{NSLocalizedDescriptionKey: @"You are not authorized"}]);
+//        }
+//        return;
+//    }
+//    NSString *requestString = [NSString stringWithFormat:@"https://api.instagram.com/v1/users/self/media/recent?access_token=%@", self.token];
+//    NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:requestString] completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {
+//        if(error) {
+//            failure(error);
+//            return;
+//        }
+//        NSError *err = nil;
+//        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+//        NSArray *result;
+//        if(!err) {
+//            result = [self.parser parsePhotoResponseFromJSON:json error:&err];
+//        }
+//        if(err) {
+//            failure(err);
+//        } else {
+//            succeeded(result);
+//        }
+//    }];
+//    [task resume];
+//}
 
 - (void)loadImageFromURL:(NSString *)urlString
 				 success:(void (^)(UIImage *))succeded

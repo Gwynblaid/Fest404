@@ -5,10 +5,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InstagramPhotoData : NSObject
-
-@property (nonatomic, strong) NSString *imageURLString;
-
-@end
+//@interface InstagramPhotoData : NSObject
+//
+//@property (nonatomic, strong) NSString *imageURLString;
+//
+//@end
 
 NS_ASSUME_NONNULL_END

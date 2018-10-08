@@ -4,3 +4,4 @@
 
 #import "NSDictionary+Requests.h"
 #import "InstagramApiClient.h"
+#import "InstagramApiClient+Private.h"

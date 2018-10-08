@@ -3,6 +3,6 @@
 
 #import "InstagramPhotoData.h"
 
-@implementation InstagramPhotoData
-
-@end
+//@implementation InstagramPhotoData
+//
+//@end

@@ -4,10 +4,10 @@
 import Foundation
 import ObjectMapper
 
-struct InstagramPhotoData: ImmutableMappable {
-    var imageURLString: String
+@objc class InstagramPhotoData: NSObject, ImmutableMappable {
+    @objc var imageURLString: String
     
-    init(map: Map) throws {
+    required init(map: Map) throws {
         imageURLString = try map.value("images.standard_resolution.url")
     }
 }

@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)defaultClient;
 
-- (void)requestMyPhotosWithSuccess:(void (^)(NSArray<InstagramPhotoData *> *))succeeded
-                           failure:(void (^)(NSError *))failure;
+//- (void)requestMyPhotosWithSuccess:(void (^)(NSArray<InstagramPhotoData *> *))succeeded
+//                           failure:(void (^)(NSError *))failure;
 - (void)loadImageFromURL:(NSString *)urlString
 				 success:(void (^)(UIImage *))succeded
 				 failure:(void (^)(NSError *))failure;

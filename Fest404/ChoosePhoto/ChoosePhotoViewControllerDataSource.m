@@ -4,6 +4,7 @@
 #import "ChoosePhotoViewControllerDataSource.h"
 #import "InstagramApiClient.h"
 #import "InstagramPhotoData.h"
+#import "Fest404-Swift.h"
 
 @interface ObjectContainer : NSObject
 

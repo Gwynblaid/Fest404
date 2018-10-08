@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModelParser : NSObject
 
-- (NSArray<InstagramPhotoData *> *)parsePhotoResponseFromJSON:(id)json error:(NSError **)error;
+//- (NSArray<InstagramPhotoData *> *)parsePhotoResponseFromJSON:(id)json error:(NSError **)error;
 - (NSString *)tokenFromJSON:(id)json error:(NSError **)error;
 
 @end
